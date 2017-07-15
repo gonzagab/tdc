@@ -1,0 +1,15 @@
+#Pre TDL Physical Constraint
+NET "start" LOC = AA20;
+INST "pre_tdl/CARRY4_inst" LOC = SLICE_X0Y0;
+
+#Pst TDL Physical Constraint
+NET "stop" LOC = AD11;
+INST "pst_tdl/CARRY4_inst" LOC = SLICE_X18Y0;
+
+#Counter Physical Constraint
+INST "crs_cnt_rst_bar1" BEL = B5LUT;
+INST "crs_cnt_rst_bar1" LOC = SLICE_X13Y6;
+
+#Created by Constraints Editor (xc5vlx30-ff676-2) - 2017/06/30
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_clk = PERIOD "clk" 7 ns HIGH 50 %;
